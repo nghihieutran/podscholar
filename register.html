@@ -46,15 +46,11 @@
             <li class="nav-item">
               <a class="nav-link" href="rules.html">Rules and Instruction</a>
             </li>
-            <li class="nav-item">
-              <a class="btn-cta nav-link js-scroll-trigger" href="register.html"
-                >Register</a
-              >
+            <li id="register" class="nav-item">
+              <a class="nav-link" href="register.html">Register</a>
             </li>
-            <li class="nav-item">
-              <a class="btn-cta nav-link js-scroll-trigger" href="login.html"
-                >Login</a
-              >
+            <li id="login" class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
             </li>
           </ul>
         </div>
@@ -63,98 +59,100 @@
     <h1 class="text-center mt-4">Register</h1>
     <div class="row mt-3">
       <div class="col-md-6 mx-auto">
-        <form id="form" class="bg-white">
+        <form id="register-form" class="bg-white">
           <div class="p-5 p-lg-5 border border-dark">
             <div class="form-group row">
               <div class="col-md-6">
-                <label for="c_fname" class="text-black"
+                <label for="fname" class="text-black"
                   >First Name <span class="text-danger">*</span></label
                 >
                 <input
                   type="text"
                   class="form-control border border-dark"
-                  id="c_fname"
-                  name="c_fname"
+                  id="fname"
+                  name="fname"
                 />
               </div>
               <div class="col-md-6">
-                <label for="c_lname" class="text-black"
+                <label for="lname" class="text-black"
                   >Last Name <span class="text-danger">*</span></label
                 >
                 <input
                   type="text"
                   class="form-control border border-dark"
-                  id="c_lname"
-                  name="c_lname"
+                  id="lname"
+                  name="lname"
                 />
               </div>
             </div>
             <div class="form-group row">
               <div class="col-md-12">
-                <label for="c_email" class="text-black"
+                <label for="email" class="text-black"
                   >Email <span class="text-danger">*</span></label
                 >
                 <input
                   type="email"
                   class="form-control border border-dark"
-                  id="c_email"
-                  name="c_email"
+                  id="email"
+                  name="email"
                   placeholder=""
                 />
               </div>
             </div>
             <div class="form-group row">
               <div class="col-md-12">
-                <label for="c_position" class="text-black"
+                <label for="position" class="text-black"
                   >Position/Title <span class="text-danger">*</span></label
                 >
                 <input
-                  type="email"
+                  type="text"
                   class="form-control border border-dark"
-                  id="c_position"
-                  name="c_position"
+                  id="position"
+                  name="position"
                   placeholder=""
                 />
               </div>
             </div>
             <div class="form-group row">
               <div class="col-md-12">
-                <label for="c_university" class="text-black"
+                <label for="org" class="text-black"
                   >University <span class="text-danger">*</span></label
                 >
                 <input
-                  type="email"
+                  type="text"
                   class="form-control border border-dark"
-                  id="c_university"
-                  name="c_university"
+                  id="org"
+                  name="org"
                   placeholder=""
                 />
               </div>
             </div>
             <div class="form-group row">
               <div class="col-md-12">
-                <label for="c_password" class="text-black"
+                <label for="password" class="text-black"
                   >Create Password <span class="text-danger">*</span></label
                 >
                 <input
+                  autocomplete="on"
                   type="password"
                   class="form-control border border-dark"
-                  id="c_password"
-                  name="c_password"
+                  id="password"
+                  name="password"
                   placeholder=""
                 />
               </div>
             </div>
             <div class="form-group row">
               <div class="col-md-12">
-                <label for="c_cpassword" class="text-black"
+                <label for="cpassword" class="text-black"
                   >Confirm Password <span class="text-danger">*</span></label
                 >
                 <input
+                  autocomplete="on"
                   type="password"
                   class="form-control border border-dark"
-                  id="c_cpassword"
-                  name="c_cpassword"
+                  id="cpassword"
+                  name="cpassword"
                   placeholder=""
                 />
               </div>
@@ -183,7 +181,7 @@
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
-    <script type="text/javascript" src="user.js"></script>
+    <script type="text/javascript" src="accounts.js"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
