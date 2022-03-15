@@ -112,3 +112,24 @@ function checkSession() {
   }
 }
 checkSession();
+
+
+//display user info on Account page
+function getUserData(userId) {
+  $.ajax({
+    url: `${baseURL}/accounts?id=${sessionStorage.userId}`,
+    type: "GET",
+    success: function (data) {
+      console.log(data);
+      $("#userName").val(`${data[0].fname} ${data[0].lname}`);
+      $("#org").val(`${data[0].org}`);
+      $("#title").val(`${data[0].title}`);
+      $("#email").val(`${data[0].email}`);
+      $("#savedpc").append(`${data[0].savedpcs}`);
+      $("#uploadedpc").append(`${data[0].uploadedpcs}`);
+    },
+    error: function (errorMessage) {
+      console.log("Error" + errorMessage);
+    },
+  });
+}
