@@ -7,9 +7,17 @@
       "email": "sebastian@gmail.com",
       "title": "Professor",
       "org": "NKU",
+      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "scientificDisciplines": "Biology",
+      "researchProfiles": " ",
       "password": "123",
       "uploadedpcs": [],
-      "savedpcs": [],
+      "savedpcs": [
+        "",
+        "1",
+        "2",
+        "3"
+      ],
       "billing": ""
     },
     {
@@ -19,9 +27,16 @@
       "email": "steve@gmail.com",
       "title": "Reseacher",
       "org": "UC",
+      "bio": "",
+      "scientificDisciplines": "",
+      "researchProfiles": "",
       "password": "123",
       "uploadedpcs": [],
-      "savedpcs": [],
+      "savedpcs": [
+        "2",
+        "3",
+        "1"
+      ],
       "billing": ""
     },
     {
@@ -31,6 +46,9 @@
       "email": "ann@gmail.com",
       "title": "Phd",
       "org": "WKU",
+      "bio": "",
+      "scientificDisciplines": "",
+      "researchProfiles": "",
       "password": "123",
       "uploadedpcs": [],
       "savedpcs": [],
@@ -43,52 +61,103 @@
       "email": "ann@gmail.com",
       "title": "Professor",
       "org": "NKU",
+      "bio": "",
+      "scientificDisciplines": "",
+      "researchProfiles": "",
       "password": "123",
       "uploadedpcs": [],
       "savedpcs": [],
       "billing": ""
+    },
+    {
+      "fname": "",
+      "lname": "",
+      "email": "",
+      "title": "",
+      "org": "",
+      "bio": "",
+      "scientificDisciplines": "",
+      "researchProfiles": "",
+      "password": "",
+      "billing": "",
+      "id": 5
+    },
+    {
+      "fname": "Khanh",
+      "lname": "Nguyen",
+      "email": "khanh@gmail.com",
+      "title": "khanh@gmail.com",
+      "org": "nku",
+      "bio": "",
+      "scientificDisciplines": "",
+      "researchProfiles": "",
+      "password": "123",
+      "billing": "",
+      "id": 6,
+      "savedpcs": [
+        "",
+        "1",
+        "2"
+      ]
     }
   ],
   "podcasts": [
     {
       "id": 1,
       "title": "The Science of Endurance: Fuel & Hydration",
-      "authors": [],
+      "authors": [
+        "Hai",
+        "Nghi"
+      ],
       "journal": "Science",
       "publishDate": "",
       "doi": 1234567,
-      "keywords": [],
-      "audio_file": "skip"
+      "keywords": [
+        "blue"
+      ],
+      "audio_file": "https://www.mboxdrive.com/Patrick10.mp3"
     },
     {
       "id": 2,
       "title": "The Future Of The Olympics: Are They Heading For Obscurity?",
-      "authors": [],
+      "authors": [
+        "Jeberry"
+      ],
       "journal": "Science",
       "publishDate": "",
       "doi": 1234567,
-      "keywords": [],
-      "audio_file": "skip"
+      "keywords": [
+        "red"
+      ],
+      "audio_file": "https://www.mboxdrive.com/Patrick7.mp3"
     },
     {
       "id": 3,
       "title": "TWinter Olympic Special: The Science of Ice Hockey, Cross Country Skiing and Biathlon",
-      "authors": [],
+      "authors": [
+        "Nghi"
+      ],
       "journal": "Science",
       "publishDate": "",
       "doi": 1234567,
-      "keywords": [],
-      "audio_file": "skip"
+      "keywords": [
+        "green"
+      ],
+      "audio_file": "http://www.largesound.com/ashborytour/sound/AshboryBYU.mp3"
     },
     {
       "id": 4,
       "title": "Bonus episode: Facts and fallacies in the trans athlete debate, a conversation with Dr Emma Hilton",
-      "authors": [],
+      "authors": [
+        "Hai"
+      ],
       "journal": "Science",
       "publishDate": "",
       "doi": 1234567,
-      "keywords": [],
-      "audio_file": "skip"
+      "keywords": [
+        "orange"
+      ],
+      "audio_file": "http://www.largesound.com/ashborytour/sound/AshboryBYU.mp3"
     }
   ]
 }

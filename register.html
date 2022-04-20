@@ -67,6 +67,7 @@
                   >First Name <span class="text-danger">*</span></label
                 >
                 <input
+                  required
                   type="text"
                   class="form-control border border-dark"
                   id="fname"
@@ -78,6 +79,7 @@
                   >Last Name <span class="text-danger">*</span></label
                 >
                 <input
+                  required
                   type="text"
                   class="form-control border border-dark"
                   id="lname"
@@ -91,6 +93,7 @@
                   >Email <span class="text-danger">*</span></label
                 >
                 <input
+                  required
                   type="email"
                   class="form-control border border-dark"
                   id="email"
@@ -105,6 +108,7 @@
                   >Position/Title <span class="text-danger">*</span></label
                 >
                 <input
+                  required
                   type="text"
                   class="form-control border border-dark"
                   id="position"
@@ -119,6 +123,7 @@
                   >University <span class="text-danger">*</span></label
                 >
                 <input
+                  required
                   type="text"
                   class="form-control border border-dark"
                   id="org"
@@ -133,6 +138,7 @@
                   >Create Password <span class="text-danger">*</span></label
                 >
                 <input
+                  required
                   autocomplete="on"
                   type="password"
                   class="form-control border border-dark"
@@ -148,6 +154,7 @@
                   >Confirm Password <span class="text-danger">*</span></label
                 >
                 <input
+                  required
                   autocomplete="on"
                   type="password"
                   class="form-control border border-dark"
@@ -155,6 +162,23 @@
                   name="cpassword"
                   placeholder=""
                 />
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-md-12">
+                <h7 class="secondary">Terms and conditions</h7>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="p_terms_and_conditions"
+                    required
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    I accept terms and conditions of Podscholar
+                  </label>
+                </div>
               </div>
             </div>
             <div class="form-group row mt-3">

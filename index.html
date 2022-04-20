@@ -27,7 +27,6 @@
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
-
     <title>PodScholar</title>
   </head>
   <body>
@@ -65,67 +64,23 @@
             class="form-control border border-dark rounded"
             type="search"
             placeholder="Search"
+            id="search-text-field"
           />
         </div>
       </div>
     </header>
-    <main class="">
-      <div class="item col-md-6 mx-auto m-3 p-4 bg-light">
-        <p class="fs-5">Episode 07: How To Create Web Page Using Bootstrap 4</p>
-        <div>
-          <p id="author">By John Pary</p>
-          <p id="journal">Journal</p>
-          <p id="doi">DOI: 1234566</p>
-        </div>
-        <div class="player mt-4">
-          <audio
-            id="player2"
-            preload="none"
-            controls
-            style="max-width: 100%"
-            class="w-100"
-          >
-            <source
-              src="http://www.largesound.com/ashborytour/sound/AshboryBYU.mp3"
-              type="audio/mp3"
-            />
-          </audio>
-        </div>
-      </div>
 
-      <div class="item col-md-6 mx-auto m-3 p-4 bg-light">
-        <p class="fs-5">Episode 07: How To Create Web Page Using Bootstrap 4</p>
-        <div>
-          <p id="author">By John Pary</p>
-          <p id="journal">Journal</p>
-          <p id="doi">DOI: 1234566</p>
-        </div>
-        <div class="player mt-4">
-          <audio
-            id="player2"
-            preload="none"
-            controls
-            style="max-width: 100%"
-            class="w-100"
-          >
-            <source
-              src="http://www.largesound.com/ashborytour/sound/AshboryBYU.mp3"
-              type="audio/mp3"
-            />
-          </audio>
-        </div>
-      </div>
-    </main>
+    <div class="" id="search-results"></div>
 
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
     <script type="text/javascript" src="accounts.js"></script>
+    <script type="text/javascript" src="search.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>

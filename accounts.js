@@ -4,6 +4,9 @@ var lname;
 var email;
 var title;
 var org;
+var bio;
+var researchProfiles;
+var scientificDisciplines;
 var password;
 
 //user clicks register
@@ -14,6 +17,9 @@ $("#register-form").on("submit", function (e) {
   email = $("#email").val();
   title = $("#email").val();
   org = $("#org").val();
+  bio = $("#bio").val();
+  researchProfiles = $("#researchProfiles").val();
+  scientificDisciplines = $("#scientificDisciplines").val();
   password = $("#password").val();
   registerUser(fname, lname, email, title, org, password);
 });
@@ -28,6 +34,9 @@ function registerUser(fname, lname, email, title, org, password) {
       email: email,
       title: title,
       org: org,
+      bio: bio,
+      researchProfiles: researchProfiles,
+      scientificDisciplines: scientificDisciplines,
       password: password,
       uploadedpcs: [],
       savedpcs: [],
@@ -113,7 +122,6 @@ function checkSession() {
 }
 checkSession();
 
-
 //display user info on Account page
 function getUserData(userId) {
   $.ajax({
@@ -121,13 +129,65 @@ function getUserData(userId) {
     type: "GET",
     success: function (data) {
       console.log(data);
-      $("#userName").val(`${data[0].fname} ${data[0].lname}`);
-      $("#org").val(`${data[0].org}`);
-      $("#title").val(`${data[0].title}`);
-      $("#email").val(`${data[0].email}`);
-      $("#savedpc").append(`${data[0].savedpcs}`);
+      $("#userName").append(`<p class="text-start overflow-visible rounded">${data[0].fname} ${data[0].lname}</p>`);
+      $("#org").append(`<p class="text-start overflow-visible rounded">${data[0].org}</p>`);
+      $("#title").append(`<p class="text-start overflow-visible rounded">${data[0].title}</p>`);
+      $("#bio").append(`<p class="text-start overflow-visible rounded">${data[0].bio}</p>`);
+      $("#scientificDisciplines").append(`<p class="text-start overflow-visible rounded">${data[0].scientificDisciplines}</p>`);
+      $("#researchProfiles").append(`<p class="text-start overflow-visible rounded">${data[0].researchProfiles}</p>`);
+      $("#email").append(`<p class="text-start overflow-visible rounded">${data[0].email}</p>`);
+      savedpodcasts(data[0].savedpcs);
       $("#uploadedpc").append(`${data[0].uploadedpcs}`);
     },
+    error: function (errorMessage) {
+      console.log("Error" + errorMessage);
+    },
+  });
+}
+
+function savedpodcasts(savedpcs) {
+  console.log(savedpcs);
+  podcastlist = "";
+  $.ajax(`${baseURL}/podcasts/`, {
+    type: "GET",
+    dataType: "json",
+    success: function (res) {
+      res.forEach((podcast) => {
+        if (savedpcs.includes(podcast.id.toString())) {
+          podcastlist += `<li><p class="text-centered">${podcast.title}</p></li>`;
+        }
+      });
+      $("#savedpc").append(podcastlist);
+    },
+    error: function (errorMessage) {
+      console.log("Error" + errorMessage);
+    },
+  });
+}
+
+//update user information
+$("#update-form").on("submit", async function (e) {
+  e.preventDefault();
+  userName = ($("#userName").val()).split(' ');
+  fname = userName[0];
+  lname = userName[1];
+  org = $("#org").val();
+  title = $("#title").val();
+  email = $("#email").val();
+  updateUser(fname,lname,org,title,email);
+});
+
+function updateUser(fname, lname, org, title, email) {
+  
+  $.ajax(`${baseURL}/accounts/${sessionStorage.userId}`, {
+    type: "PATCH",
+    data: {
+      fname: fname,
+      lname: lname,
+      org: org,
+      title: title,
+      email: email
+    }, // data to submit
     error: function (errorMessage) {
       console.log("Error" + errorMessage);
     },
