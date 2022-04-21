@@ -99,6 +99,19 @@
         "1",
         "2"
       ]
+    },
+    {
+      "fname": "",
+      "lname": "Berry",
+      "email": "",
+      "title": "",
+      "org": "",
+      "bio": "",
+      "researchProfiles": "",
+      "scientificDisciplines": "",
+      "password": "123",
+      "billing": "",
+      "id": 7
     }
   ],
   "podcasts": [

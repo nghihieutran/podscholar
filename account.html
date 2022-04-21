@@ -127,11 +127,8 @@
                 <div class="text-black fs-5 fw-bold" id="email">Email</div>
               </div>
               <!--Saved Podcasts-->
-              <div class="col-md-12">
-                <label for="savepc" class="text-black mt-4"
-                  >Saved Podcasts</label
-                >
-                <ul id="savedpc" class="text-black"></ul>
+              <div class="col-md-12" id = "savedpc">
+              <a class="nav-link" href="savedpodcasts.html">Saved Podcasts</a>
               </div>
               <!--Uploaded Podcasts-->
               <div class="col-md-12">
@@ -165,7 +162,7 @@
     <script type="text/javascript" src="accounts.js"></script>
 
     <script>
-      getUserData(sessionStorage.userId);
+      getUserData();
     </script>
   </body>
 </html>

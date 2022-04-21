@@ -123,12 +123,11 @@ function checkSession() {
 checkSession();
 
 //display user info on Account page
-function getUserData(userId) {
+function getUserData() {
   $.ajax({
     url: `${baseURL}/accounts?id=${sessionStorage.userId}`,
     type: "GET",
     success: function (data) {
-      console.log(data);
       $("#userName").append(`<p class="text-start overflow-visible rounded">${data[0].fname} ${data[0].lname}</p>`);
       $("#org").append(`<p class="text-start overflow-visible rounded">${data[0].org}</p>`);
       $("#title").append(`<p class="text-start overflow-visible rounded">${data[0].title}</p>`);
