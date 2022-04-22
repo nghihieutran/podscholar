@@ -11,12 +11,13 @@
       "scientificDisciplines": "Biology",
       "researchProfiles": " ",
       "password": "123",
-      "uploadedpcs": [],
+      "uploadedpcs": [
+        "3"
+      ],
       "savedpcs": [
         "",
         "1",
-        "2",
-        "3"
+        "2"
       ],
       "billing": ""
     },
