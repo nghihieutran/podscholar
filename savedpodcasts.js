@@ -4,7 +4,6 @@ function getUserData() {
       url: `${baseURL}/accounts?id=${sessionStorage.userId}`,
       type: "GET",
       success: function (data) {
-        $("#userName").append(`<p class="text-start overflow-visible rounded">${data[0].fname} ${data[0].lname}</p>`);
         savedpodcasts(data[0].savedpcs);
       },
       error: function (errorMessage) {

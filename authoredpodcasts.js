@@ -1,4 +1,4 @@
-console.log("savedpodcasts.js is being used");
+console.log("authoredpodcasts.js is being used");
 function getUserData() {
     $.ajax({
       url: `${baseURL}/accounts?id=${sessionStorage.userId}`,
