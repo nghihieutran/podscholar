@@ -51,10 +51,10 @@ function index() {
                     ${podcast.likes} likes
                     |  ${podcast.bookmarks} bookmarks
                     | <i class="icon-tags"></i> Tags : 
-                    <a href="#"><span class="btn btn-dark btn-sm label label-info">Snipp</span></a>
-                    <a href="#"><span class="btn btn-dark btn-sm label label-info">Bootstrap</span></a>
-                    <a href="#"><span class="btn btn-dark btn-sm label label-info">UI</span></a>
-                    <a href="#"><span class="btn btn-dark btn-sm label label-info">growth</span></a>
+                    <a href="#"><span class="btn btn-dark btn-sm label label-info">Tag1</span></a>
+                    <a href="#"><span class="btn btn-dark btn-sm label label-info">Tag2</span></a>
+                    <a href="#"><span class="btn btn-dark btn-sm label label-info">Tag3</span></a>
+                    <a href="#"><span class="btn btn-dark btn-sm label label-info">Tag5</span></a>
                 </p>
             </div>
         </div>

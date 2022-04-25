@@ -18,7 +18,6 @@
     />
 
     <link href="../../style.css" rel="stylesheet" />
-    <link href="../css/sidebar.css" rel="stylesheet" />
     <script
       src="https://kit.fontawesome.com/98661e544f.js"
       crossorigin="anonymous"
@@ -59,7 +58,7 @@
     </nav>
     <header class="row mt-4">
       <div class="col-6 mx-auto">
-        <h1 class="mb-4 text-center">PodScholar</h1>
+        <h1 class="mb-4 text-center">Saved Podcasts</h1>
         <div class="input-group">
           <input
             class="form-control border border-dark rounded"
@@ -70,64 +69,16 @@
         </div>
       </div>
     </header>
-    <div class="container">
-      <div class="row">
-        <div class="col-2">
-          <div class="flex-shrink-0 p-3 bg-white" style="width: 280px;">
-            <ul class="list-unstyled ps-0">
-              <li class="mb-1">
-                <button class="btn btn-toggle btn-dark align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
-                  Tags
-                </button>
-                <div class="collapse" id="home-collapse">
-                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                    <li><a href="#" class="btn link-dark rounded">Blue</a><div class="btn btn-sm btn-secondary rounded">1</div></li>
-                    <li><a href="#" class="btn link-dark rounded">Red</a><div class="btn btn-sm btn-secondary rounded">2</div></li>
-                    <li><a href="#" class="btn link-dark rounded">Green </a><div class="btn btn-sm btn-secondary rounded">1</div></li>
-                  </ul>
-                </div>
-              </li>
-              <li class="mb-1">
-                <button class="btn btn-toggle btn-dark align-items-center btn-dark rounded collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
-                  Discipline
-                </button>
-                <div class="collapse" id="dashboard-collapse">
-                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                    <li><a href="#" class="btn btn-sm link-dark rounded">Biology</a><div class="btn btn-sm btn-secondary rounded">2</div></li>
-                    <li><a href="#" class="btn btn-sm link-dark rounded">Math</a><div class="btn btn-sm btn-secondary rounded">2</div></li>
-                  </ul>
-                </div>
-              </li>
-              <li class="mb-1">
-                <button class="btn btn-toggle btn-dark align-items-center btn-dark rounded collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
-                  Authors
-                </button>
-                <div class="collapse" id="orders-collapse">
-                  <ul class="btn-toggle-nav list-unstyled fw-normal small">
-                    <li><a href="#" class="btn btn-sm link-dark rounded">Jeberry</a></li>
-                    <li><a href="#" class="btn btn-sm link-dark rounded">Obama</a></li>
-                  </ul>
-                </div>
-              </li>    
-            </ul>
-          </div>
-        </div>
-        <div class="col">
-          <div class="" id="search-results"></div>
-        </div>
-      </div>
-    </div>
-  
+
+    <div class="" id="saved-podcasts"></div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-    <script type="text/javascript" src="../scripts/sidebars.js"></script>
     <script type="text/javascript" src="../scripts/accounts.js"></script>
-    <script type="text/javascript" src="../scripts/search.js"></script>
-    
+    <script type="text/javascript" src="../scripts/savedpodcasts.js"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--

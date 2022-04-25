@@ -22,11 +22,11 @@ function getUserData() {
           if (savedpcs.includes(podcast.id.toString())) 
             $("#saved-podcasts").append(
                 `<div class="item col-md-6 mx-auto m-3 p-4 bg-light">
-                    <p class="fs-5"><strong>${podcast.title}</strong></p>
+                    <p class="fs-5">${podcast.title}</p>
                 <div>
-                    <p id="author"><strong>By: </strong> ${podcast.authors}</p>
-                    <p id="journal"><strong>Journal: </strong>${podcast.journal}</p>
-                    <p id="doi"><strong>DOI:</strong> ${podcast.doi}</p>
+                    <p id="author">By ${podcast.authors}</p>
+                    <p id="journal">Journal: ${podcast.journal}</p>
+                    <p id="doi">DOI: ${podcast.doi}</p>
                 </div>
                 <div class="player mt-4">
                     <audio
