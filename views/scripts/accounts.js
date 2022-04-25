@@ -128,13 +128,27 @@ function getUserData() {
     url: `${baseURL}/accounts?id=${sessionStorage.userId}`,
     type: "GET",
     success: function (data) {
-      $("#userName").append(`<p class="text-start overflow-visible rounded">${data[0].fname} ${data[0].lname}</p>`);
-      $("#org").append(`<p class="text-start overflow-visible rounded">${data[0].org}</p>`);
-      $("#title").append(`<p class="text-start overflow-visible rounded">${data[0].title}</p>`);
-      $("#bio").append(`<p class="text-start overflow-visible rounded">${data[0].bio}</p>`);
-      $("#scientificDisciplines").append(`<p class="text-start overflow-visible rounded">${data[0].scientificDisciplines}</p>`);
-      $("#researchProfiles").append(`<p class="text-start overflow-visible rounded">${data[0].researchProfiles}</p>`);
-      $("#email").append(`<p class="text-start overflow-visible rounded">${data[0].email}</p>`);
+      $("#userName").append(
+        `<p class="text-start overflow-visible rounded">${data[0].fname} ${data[0].lname}</p>`
+      );
+      $("#org").append(
+        `<p class="text-start overflow-visible rounded">${data[0].org}</p>`
+      );
+      $("#title").append(
+        `<p class="text-start overflow-visible rounded">${data[0].title}</p>`
+      );
+      $("#bio").append(
+        `<p class="text-start overflow-visible rounded">${data[0].bio}</p>`
+      );
+      $("#scientificDisciplines").append(
+        `<p class="text-start overflow-visible rounded">${data[0].scientificDisciplines}</p>`
+      );
+      $("#researchProfiles").append(
+        `<p class="text-start overflow-visible rounded">${data[0].researchProfiles}</p>`
+      );
+      $("#email").append(
+        `<p class="text-start overflow-visible rounded">${data[0].email}</p>`
+      );
       savedpodcasts(data[0].savedpcs);
       $("#uploadedpc").append(`${data[0].uploadedpcs}`);
     },
@@ -167,17 +181,16 @@ function savedpodcasts(savedpcs) {
 //update user information
 $("#update-form").on("submit", async function (e) {
   e.preventDefault();
-  userName = ($("#userName").val()).split(' ');
+  userName = $("#userName").val().split(" ");
   fname = userName[0];
   lname = userName[1];
   org = $("#org").val();
   title = $("#title").val();
   email = $("#email").val();
-  updateUser(fname,lname,org,title,email);
+  updateUser(fname, lname, org, title, email);
 });
 
 function updateUser(fname, lname, org, title, email) {
-  
   $.ajax(`${baseURL}/accounts/${sessionStorage.userId}`, {
     type: "PATCH",
     data: {
@@ -185,7 +198,7 @@ function updateUser(fname, lname, org, title, email) {
       lname: lname,
       org: org,
       title: title,
-      email: email
+      email: email,
     }, // data to submit
     error: function (errorMessage) {
       console.log("Error" + errorMessage);
