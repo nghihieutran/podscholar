@@ -82,6 +82,24 @@ $(document).on("click", "#savep", function (e) {
     },
   });
 });
+
+$(document).on("click", "#like", function (e) {
+  e.preventDefault();
+  e.stopPropagation();
+  var podcast_id = $(this).val();
+  if (window.sessionStorage.getItem("userId") == null) {
+    alert("You are not logged in");
+    window.location.href = "index.html";
+  }
+  console.log(`${baseURL}/podcasts/${podcast_id}`)
+  $.ajax({
+    url: `${baseURL}/podcasts/${podcast_id}`,
+    type: "PATCH",
+    success: function (data) {
+      likes = likes+1;
+    },
+  });
+});
 $("#search-text-field").keypress(function (event) {
   var keycode = event.keyCode || event.which;
   if (keycode == "13") {

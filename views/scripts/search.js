@@ -36,7 +36,7 @@ function search(search) {
             authorsString += `<a class="text-dark" href="author.html?index=${author}">${author}</a>\t`;
           });
           $("#search-results").append(
-            `<div class="item col-md-6 mx-auto m-3 p-4 bg-light">
+            `<div class="item mx-auto m-3 p-4 bg-light">
                             <p class="fs-5">${podcast.title}</p>
                             <div>
                               <p id="author">By ${authorsString}</p>
@@ -90,6 +90,34 @@ $(document).on("click", "#savep", function (e) {
         url: `${baseURL}/accounts/${window.sessionStorage.userId}`,
         type: "PATCH",
         data: list,
+        dataType: "json",
+        success: function (data) {
+          console.log(data);
+        },
+      });
+    },
+  });
+});
+$(document).on("click", "#like", function (e) {
+  e.preventDefault();
+  e.stopPropagation();
+  var podcast_id = $(this).val();
+  if (window.sessionStorage.getItem("userId") == null) {
+    alert("You are not logged in");
+    window.location.href = "index.html";
+  }
+  $.ajax({
+    url: `${baseURL}/podcasts/${podcast_id}`,
+    type: "GET",
+    success: function (data) {
+      like = parseInt(data.likes)+1;
+      temp = {likes : like}
+
+      $.ajax({
+        traditional: true,
+        url: `${baseURL}/podcasts/${podcast_id}`,
+        type: "PATCH",
+        data: temp,
         dataType: "json",
         success: function (data) {
           console.log(data);
